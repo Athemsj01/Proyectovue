@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-sheet height="100vh" width="100vw" class="background">
+    <v-row no-gutters justify="center" align="center" style="height: 100vh" >
+       <login-card-vue />
+    </v-row>
+   
+  </v-sheet>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { defineComponent } from "vue";
 
-export default {
+//Components
+import LoginCardVue from "@/components/user/LoginCard.vue";
+
+export default defineComponent({
   name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-};
+  components : {
+    LoginCardVue
+},
+});
 </script>
+<style>
+.background {
+  background-color: bisque;
+}
+</style>
